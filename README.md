@@ -1,10 +1,15 @@
 # Creating HTML With JSON Lab
 
-## Problem Statement
+## Learning Goals
 
-Let's say you want to look up a movie on [IMDB](http://www.imdb.com/): you
-enter the title into a search bar, find the movie in the results and open up a
-page that contains content unique to that specific movie. The page includes the
+- Retrieve data from a JSON file using JavaScript
+- Use DOM manipulation to add HTML content to a page
+
+## Introduction
+
+Let's say you want to look up a movie on [IMDB](http://www.imdb.com/): you enter
+the title into a search bar, find the movie in the results and open up a page
+that contains content unique to that specific movie. The page includes the
 movie's description, the director, the stars, trailers, etc...it's all there!
 Each movie you navigate to has its own content, all displayed in a consistent
 structure.
@@ -16,28 +21,23 @@ what would happen if you wanted to go back and make an change to the layout?
 
 For this lab, we will be exploring the use of _dynamic content_, creating the
 page by using DOM updates based on data in the JSON format. Many sites publish
-and share their information in JSON, so it's a good format for us to learn
-with. Will cover it in more detail below.
+and share their information in JSON, so it's a good format for us to learn with.
+Will cover it in more detail below.
 
 Your task is to access the provided JSON data and use it to populate a webpage
 using JavaScript and DOM manipulation.
-
-## Objectives
-
-* Retrieve data from a JSON file using JavaScript
-* Use DOM manipulation to add HTML content to a page
 
 ## Retrieve Data From JSON
 
 Many modern websites are built to display dynamic, rather than static content.
 This means that a site will have some basic HTML skeleton, but the actual text
 and images displayed are not hardcoded. Instead, specific content is sent
-separately based on what you want to look at, and when it arrives,
-JavaScript is used to add this content to the page.
+separately based on what you want to look at, and when it arrives, JavaScript is
+used to add this content to the page.
 
 The standard way we send this data is with JavaScript Object Notation, or JSON
 for short. JSON data is sent as a long string to your browser, but the actual
-content looks like a set of objects and arrays.  For instance, if you go to a
+content looks like a set of objects and arrays. For instance, if you go to a
 recipe website that uses JSON and click on a particular recipe, the data
 received for the recipe would look something like this:
 
@@ -72,9 +72,9 @@ When it is received, it is converted into a set of nested objects and arrays,
 which JavaScript can then read and use to fill in the content.
 
 Many of the most popular websites around are built using JSON to deliver their
-content. In fact, many of your favorite phone apps are too!  Understanding how
-to take data in JSON format and convert it to HTML content is a critical skill
-in modern web development.
+content. In fact, many of your favorite phone apps are too! Understanding how to
+take data in JSON format and convert it to HTML content is a critical skill in
+modern web development.
 
 ## Instructions
 
@@ -92,8 +92,8 @@ handling the data.
 To get started, take a look at the files `index.js` and `movies.json`. All of
 our data is in a separate file from our JavaScript. Since it is a local file,
 the easiest way to get access to it would be to include an HTML script tag
-within `index.html`. Add the following to the file, just before adding a`index.js`
-script tag:
+within `index.html`. Add the following to the file, just before adding
+a`index.js` script tag:
 
 ```html
 <script type="text/javascript" src="movies.json"></script>
@@ -112,17 +112,19 @@ The way you choose to write your code is up to you. Use the provided
 `document.addEventListener` as a starting point. Use test errors as guidance on
 what to do next. Your app should do the following:
 
-* Use the HTML ids to populate content from our JSON data with the appropriate
-HTML elements
-* On opening, replace any filler content with all of the data related to 'Titanic'
-* Use the provided buttons to switch display content to 'Terminator' data and back
+- Use the HTML ids to populate content from our JSON data with the appropriate
+  HTML elements
+- On opening, replace any filler content with all of the data related to
+  'Titanic'
+- Use the provided buttons to switch display content to 'Terminator' data and
+  back
 
 #### Suggested Work Flow
 
-Assign the 'Titanic' data to `index.html` using DOM manipulation.  Each
-key/value pair in the data corresponds to an element on the webpage, so you'll
-need to write code that can append all of them.  The steps involved will change
-for different values (i.e. you will need to use loops for the cast and reviews
+Assign the 'Titanic' data to `index.html` using DOM manipulation. Each key/value
+pair in the data corresponds to an element on the webpage, so you'll need to
+write code that can append all of them. The steps involved will change for
+different values (i.e. you will need to use loops for the cast and reviews
 data).
 
-*Note:* when manipulating the DOM, use `innerHTML` instead of `innerText`.
+_Note:_ when manipulating the DOM, use `innerHTML` instead of `innerText`.
